@@ -1,0 +1,30 @@
+README
+---------------------------
+Files included:
+---------------------------
+1. matmul.c
+2. Makefile
+3. Homework Assignment 5.pdf
+4. ServerRuns.pdf (instead of matmul it was called hwcode - ignore naming)
+5. LaptopRuns.pdf (instead of matmul it was called hwcode - ignore naming)
+---------------------------
+Running the program:
+---------------------------
+1. Run make, or compile the c file with the command: gcc matmul.c -O3 -o matmul
+
+2. Execute the command, passing the number of tiles per row/column of the tiled matrix
+using the command: ./matmul <number of tiles>
+
+3. The output will first display the running time of the classic matmul function. The
+results of matmul will be stored in C[][]. This output will be followed by the running
+time of matmul_tiles, the version using tiled matrices, and a transposed B matrix. The
+results of matmul_tiles will be stored in D[][].
+
+4. The end of the output will specify a verify code of 0 if C[][] == D[][]. It will also tell you the speed up % using this new function compared to the last one. 
+
+
+Notes: There was a much more significant benefit when running the tiled version on my laptop than on the school server, but both had the same 'sweet spot' with 256 tiles providing the most speedup.
+(730% on a laptop and 120% on a server)
+
+Sources:
+https://www.youtube.com/watch?v=aMvCEEBIBto
